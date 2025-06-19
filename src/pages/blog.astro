@@ -9,7 +9,7 @@ const allBlogPosts = await getCollection('blog')
 <RootLayout title='Dhruv Shah - Blog'>
 	<div class='container mx-auto py-20 px-5'>
 		<div class='grid mx-5 grid-cols-1 gap-10 lg:grid-cols-2 lg:mx-0'>
-			{allBlogPosts.map((post) => <BlogPost title={post.data.title} imageSrc={post.data.image} imageAlt={post.data.title} blurb={post.data.blurb} slug={post.slug} />)}
+			{allBlogPosts.sort((a, b) => a.data.pub_date.getTime() - b.data.pub_date.getTime()).map((post) => <BlogPost title={post.data.title} date={post.data.date_text} blurb={post.data.blurb} imageSrc={post.data.image} imageAlt={post.data.title} slug={post.slug} />)}
 		</div>
 	</div>
 </RootLayout>

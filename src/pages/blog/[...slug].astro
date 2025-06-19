@@ -18,6 +18,9 @@ const { Content } = await entry.render()
 
 <RootLayout title={`Dhruv Shah - ${entry.data.title}`}>
 	<article class='mx-4 md:mx-auto prose py-10 prose-headings:font-semibold' style='max-width: min(50rem, 100vw);'>
+		<p><small>{entry.data.date_text}</small></p>
+		<h1 class='-mt-4'>{entry.data.title}</h1>
+		<img src={entry.data.image} alt={entry.data.title + ' image'} />
 		<Content />
 	</article>
 </RootLayout>

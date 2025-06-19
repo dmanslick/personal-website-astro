@@ -1,19 +1,23 @@
 ---
 interface Props {
 	title: string
-	slug: string
+	date: string
+	blurb: string
 	imageSrc: string
 	imageAlt: string
-	blurb: string
+	slug: string
 }
 
-const { title, slug, imageSrc, imageAlt, blurb } = Astro.props
+const { title, date, slug, imageSrc, imageAlt, blurb } = Astro.props
 ---
 
 <div>
-	<h2 class='text-center my-5 text-3xl lg:text-xl xl:text-2xl 2xl:text-3xl'>{title}</h2>
+	<h2 class='text-center my-5 text-3xl lg:text-xl xl:text-2xl 2xl:text-3xl font-medium'>{title}</h2>
 	<a href={`/blog/${slug}`} target='_blank'>
 		<img class='border-2 rounded-xl max-w-full h-auto drop-shadow-md hover-image' src={imageSrc} alt={imageAlt} />
 	</a>
-	<p class='mt-4'>{blurb}</p>
+	<div class='mt-4 mx-4'>
+		<small>{date}</small>
+		<p class='text-[#374151]'>{blurb}</p>
+	</div>
 </div>
