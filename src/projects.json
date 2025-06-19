@@ -1,0 +1,65 @@
+[
+	{
+		"title": "The Davv Group",
+		"link": "https://thedavvgroup.com/",
+		"imageSrc": "images/project-images/The Davv Group.png",
+		"imageAlt": "The Davv Group Website",
+		"tags": ["TailwindCSS", "JavaScript", "NodeJS", "ExpressJs"]
+	},
+	{
+		"title": "TensorFlowJS Rock Paper Scissors",
+		"link": "./files/tensorflowjs-rock-paper-scissors/index.html",
+		"imageSrc": "images/project-images/tensorflow rock paper scissors.png",
+		"imageAlt": "TensorFlowJS Rock Paper Scissors",
+		"tags": ["HTML", "CSS", "JavaScript", "TensorFlowJS"]
+	},
+	{
+		"title": "Nemesis Scoutview",
+		"link": "https://scoutview-2025-deployment.vercel.app/",
+		"imageSrc": "images/project-images/scoutview-2025.png",
+		"imageAlt": "Nemesis Scoutview",
+		"tags": ["React", "TypeScript", "Zod", "Capacitor"]
+	},
+	{
+		"title": "Nemesis Quickscout",
+		"link": "https://github.com/Team2590/Quickscout-Desktop-2025",
+		"imageSrc": "https://placehold.co/1903x927",
+		"imageAlt": "Nemesis Quickscout",
+		"tags": ["React", "Zod", "Electron"]
+	},
+	{
+		"title": "Nemesis Masterscout",
+		"link": "https://nemesis-masterscout.vercel.app/",
+		"imageSrc": "images/project-images/masterscout-2024.png",
+		"imageAlt": "Nemesis Masterscout",
+		"tags": ["React", "NextJS", "Material UI", "Firebase"]
+	},
+	{
+		"title": "Roam Website",
+		"link": "https://theroamtravel.com/",
+		"imageSrc": "images/project-images/roam-image.png",
+		"imageAlt": "Roam Website",
+		"tags": ["Astro", "JavaScript"]
+	},
+	{
+		"title": "Kora - Congresional App Challenge",
+		"link": "https://kora-ochre.vercel.app/",
+		"imageSrc": "images/project-images/kora-image.png",
+		"imageAlt": "Kora",
+		"tags": ["React", "TypeScript", "Chakra UI", "Tensorflow JS", "Firebase", "Google AutoML", "Capacitor"]
+	},
+	{
+		"title": "Arduino GPS Follower",
+		"link": "https://github.com/dmanslick/GPS-follower",
+		"imageSrc": "https://placehold.co/1903x927",
+		"imageAlt": "Arduino GPS Follower",
+		"tags": ["Arduino", "C++", "Embedded Systems"]
+	},
+	{
+		"title": "ThreeJS Solar System",
+		"link": "https://three-js-solar-system-omega.vercel.app/",
+		"imageSrc": "images/project-images/three-js-solar-system.png",
+		"imageAlt": "Nemesis Scoutview",
+		"tags": ["ThreeJS", "WebGL"]
+	}
+]

@@ -1,0 +1,23 @@
+---
+import { getCollection } from 'astro:content'
+import RootLayout from '../../layouts/RootLayout.astro'
+
+export async function getStaticPaths() {
+	const blogEntries = await getCollection('blog')
+	return blogEntries.map((entry) => {
+		return {
+			params: { slug: entry.slug },
+			props: { entry }
+		}
+	})
+}
+
+const { entry } = Astro.props
+const { Content } = await entry.render()
+---
+
+<RootLayout title={`Dhruv Shah - ${entry.data.title}`}>
+	<article class='mx-4 md:mx-auto prose py-10 prose-headings:font-semibold' style='max-width: min(50rem, 100vw);'>
+		<Content />
+	</article>
+</RootLayout>

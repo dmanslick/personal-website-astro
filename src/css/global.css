@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+	scroll-padding-top: 80px !important;
+	margin-top: 80px;
+	scroll-behavior: smooth;
+}
+
+#home,
+#about {
+	height: calc(100vh - 80px);
+}
+
+#home > div {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	margin-inline: auto;
+}
+
+@media screen and (min-width: 576px) and (max-width: 1023px) {
+	#about {
+		height: auto;
+	}
+}
+
+.bar-1,
+.bar-2,
+.bar-3 {
+	width: 35px;
+	height: 5px;
+	background-color: black;
+	margin: 6px;
+	transition: 0.25s;
+}
+
+.change .bar-1 {
+	transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar-2 {
+	opacity: 0;
+}
+
+.change .bar-3 {
+	transform: translate(0, -11px) rotate(45deg);
+}
+
+@media (hover: hover) {
+	.nav-link:hover {
+		color: #3961c9;
+	}
+}
+
+@media (hover: none) {
+	.nav-link:active {
+		color: #3961c9;
+	}
+}
+
+.hover-image {
+	transition: 0.15s;
+}
+
+.hover-image:hover {
+	transform: scale(1.02);
+}

@@ -1,0 +1,21 @@
+---
+interface Props {
+	title: string
+	link: string
+	imageSrc: string
+	imageAlt: string
+	tags: string[]
+}
+
+const { title, link, tags, imageSrc, imageAlt } = Astro.props
+---
+
+<div class='portfolio-project'>
+	<h2 class='text-center my-5 text-3xl lg:text-xl xl:text-2xl 2xl:text-3xl'>{title}</h2>
+	<a href={link} target='_blank'>
+		<img class='border-2 rounded-xl max-w-full h-auto drop-shadow-md hover-image' src={imageSrc} alt={imageAlt} />
+	</a>
+	<p class='flex flex-row justify-center gap-3 mt-6 flex-wrap text-sm lg:text-base'>
+		{tags.map((tag) => <span class='outline-1 outline outline-black text-black py-1 px-2 rounded hover:bg-black hover:text-white transition-all duration-300 cursor-pointer h-fit text-center select-none'>{tag}</span>)}
+	</p>
+</div>

@@ -1,11 +1,60 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Project from '../components/Project.astro'
+import RootLayout from '../layouts/RootLayout.astro'
+import projects from '../projects.json'
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<RootLayout title='Dhruv Shah - Site'>
+	<!-- home/title -->
+	<section id='home'>
+		<div class='container mx-auto px-5 md:px-5 lg:px-3 grid grid-cols-1 lg:grid-cols-2'>
+			<div class='md:hidden font-semibold text-6xl xs:text-7xl'>
+				<p class='text-dhruv'>Developer</p>
+				<p class='my-6 text-dhruvDark'>Designer</p>
+				<p class='text-dhruvDarker'>Student</p>
+			</div>
+			<div class='my-auto hidden md:block'>
+				<div>
+					<p class='text-7xl lg:text-5xl xl:text-6xl 2xl:text-7xl'>I am a <span class='font-semibold text-dhruv' id='developer-text'></span></p>
+					<p class='text-6xl lg:text-5xl xl:text-5xl 2xl:text-6xl py-5'>I am a <span class='font-semibold text-dhruvDark' id='designer-text'></span></p>
+					<p class='text-5xl lg:text-5xl xl:text-4xl 2xl:text-5xl'>I am a <span class='font-semibold text-dhruvDarker' id='student-text'></span></p>
+				</div>
+			</div>
+			<div class='place-content-center hidden lg:block' id='#main-dhruv-image'>
+				<img src='images/dhruv-image.png' alt='Dhruv Shah image' class='rounded-full mx-auto' />
+			</div>
+		</div>
+	</section>
+	<div class='border-b-2'></div>
+
+	<!-- about -->
+	<section class='border-b-2 grid place-content-center min-h-screen' id='about'>
+		<div>
+			<img src='images/dhruv-image.png' alt='Dhruv Shah image' class='mx-auto mt-10 md:mt-0 md:hidden' height='300' width='300' />
+			<div class='py-10 text-lg mx-10 max-w-2xl md:mx-auto'>
+				<p>Hi, I'm a student who has had a vast interest in STEM ever since I was young. Whether it be playing with Lego or watching documentaries on the Science Channel, I have always been interested in STEM. I love learning new things and solving problems. I also have a passion for web development and web design. I enjoy creating websites that are functional, beautiful and user-friendly. I have learned various skills and tools such as HTML, CSS, JavaScript, Bootstrap, TailwindCSS, ReactJS, NextJS and more. I have also worked on some projects for myself and for others. You can check out some of my work on my portfolio website. I hope to pursue a career in computer engineering in the future.</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- contact -->
+	<section class='bg-neutral-800 py-6 text-neutral-400' id='contact'>
+		<div class='container mx-auto grid grid-rows-3 justify-center text-center gap-y-3 lg:gap-y-0 lg:w-3/5 lg:grid-cols-3 lg:grid-rows-1'>
+			<i class='bi bi-envelope not-italic hover:text-dhruvLighter'> <a href='mailto:dvvshah@gmail.com' target='_blank'> dvvshah@gmail.com</a></i>
+			<i class='bi bi-linkedin not-italic md:mx-10 hover:text-dhruvLighter'> <a href='https://www.linkedin.com/in/dhruv-shah-6a7210277/' target='_blank'> Dhruv Shah</a></i>
+			<i class='bi bi-github not-italic hover:text-dhruvLighter'><a href='https://github.com/dmanslick' target='_blank'> dmanslick</a></i>
+		</div>
+	</section>
+
+	<!-- projects -->
+	<section class='border-b-2' id='projects'>
+		<div class='container mx-auto py-20 px-5'>
+			<h1 class='text-center mb-16 text-5xl font-semibold'>Projects</h1>
+			<div class='grid mx-5 grid-cols-1 gap-10 lg:grid-cols-2 lg:mx-0'>
+				{projects.map((project) => <Project title={project.title} link={project.link} tags={project.tags} imageSrc={project.imageSrc} imageAlt={project.imageAlt} />)}
+			</div>
+		</div>
+	</section>
+
+	<script src='../js/home.js'></script>
+</RootLayout>
