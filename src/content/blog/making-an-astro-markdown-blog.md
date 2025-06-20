@@ -110,8 +110,8 @@ const { Content } = await entry.render()
 		<img src={entry.data.image} alt={entry.data.title + ' image'} />
 		<Content />
 	</article>
+    <script src='../../js/blog-entry.js'></script>
 </RootLayout>
-
 ```
 
 To display all my blog entries, I created a `blog.astro` file and a `BlogPost.astro`. BlogPost is a component that the `blog.astro` page will use to display all of my blog entries. This is the code for `BlogPost.astro`.
@@ -171,6 +171,7 @@ The is the final folder structure (ignoring things in the public folder)
 │   ├── css
 │   │   └── global.css
 │   ├── js
+│   │   ├── blog-entry.js
 │   │   ├── home.js
 │   │   └── root.js
 │   ├── layouts
@@ -190,4 +191,4 @@ The is the final folder structure (ignoring things in the public folder)
 
 ## Wrapping up
 
-After creating a test blog post and verifying that everything worked, I knew that I was finished. I then deployed the project on Vercel. You can access the source code for my current website [here](), and the code for my old webiste [here](https://github.com/dmanslick/Personal-Site).
+After creating a test blog post and verifying that everything worked, I knew that I was finished. I then deployed the project on Vercel. You can access the source code for my current website [here](https://github.com/dmanslick/personal-website-astro), and the code for my old webiste [here](https://github.com/dmanslick/Personal-Site).
