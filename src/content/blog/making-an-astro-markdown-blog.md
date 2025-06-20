@@ -56,7 +56,20 @@ This is what the project structure looked like at that point
 
 Then I installed TailwindCSS, since it was what I had used for most of the styling on my old website. That site was built with Tailwind V3 and included some custom colors. I didn't want to deal with updating the config for Tailwind V4 on the new site, so I just installed V3 again instead.
 
-I had previously used web components to easily write html to display my projects, so I decided to switch these to Astro components. I created a Project.astro file in the components folder, and refactored the web component to an Astro component.
+I had previously used web components to easily write html to display my projects, so I decided to switch these to Astro components. I created a Project.astro file in the components folder, and refactored the web component to an Astro component. Furthermore, instead of manually creating a new component everytime I wanted to update my projects section, I decided to simply store my projects in a JSON file, and then have my `index.asto` page map over that JSON.
+
+```astro
+<!-- projects -->
+<section class='border-b-2' id='projects'>
+    <div class='container mx-auto py-20 px-5'>
+        <h1 class='text-center mb-16 text-5xl font-semibold'>Projects</h1>
+        <div class='grid mx-5 grid-cols-1 gap-10 lg:grid-cols-2 lg:mx-0'>
+            {projects.map((project) => <Project title={project.title} link={project.link} tags={project.tags} imageSrc={project.imageSrc} imageAlt={project.imageAlt} />)}
+        </div>
+    </div>
+</section>
+```
+
 
 ## The Confusing Collections API
 
